@@ -1,0 +1,72 @@
+<%- partial('../../partials/topsidebar.ejs') %>
+<%- partial('../../partials/sidebar.ejs') %>
+<%- partial('../../partials/offsidebar.ejs') %>
+
+    <!-- Main section-->
+   
+    <section>
+      <div class="content-wrapper">
+            <div class="content-heading">
+               <!-- START Language list-->
+               <div class="pull-right">
+                  <div class="btn-group">
+                     <button type="button" data-toggle="dropdown" class="btn btn-default">English</button>
+                     <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort">
+                        <li><a href="#" data-set-lang="en">English</a>
+                        </li>
+                        <li><a href="#" data-set-lang="es">Spanish</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- END Language list    -->
+               <large data-localize="dashboard.SCHEDULE" style="text-align:center;">Welcome To SiR
+               </large>
+            </div>   
+             <a href="/GS01_honorsStudents/toPdf"><button type="button" class="mb-sm btn btn-default">Save As PDF</button></a>
+             
+            <!--Begin Main Section of Honor Students -->
+
+            <!-- START DATATABLE -->
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="panel panel-default">
+                        <div class="panel-heading" align=center><%= title %> 
+                        </div>
+                        <div class="panel-body">
+                           <div class="table-responsive">
+                              <table id="datatable1" class="responsive table-striped table-hover" width=100%>
+                                 <thead>
+                                    <tr>
+                                       <% 
+                                          const headers = myQuery[0] ? Object.keys(myQuery[0]) : [] %>
+                                       <% _.each(headers, function(data) { %>
+                                    <th><b><%= data %> &nbsp</b></th>
+                                       <% }) %>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <% _.each(myQuery, function(record) { %>
+                                    <tr>
+                                    <% for(let field of headers) { %>
+                                       <td><%= record[field] %>  &nbsp </td>
+                                    <% } %>
+                                    </tr>
+                                    <% }) %>
+                                 <tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- END DATATABLE 2-->
+
+
+
+
+            <!-- End Main Section of Honor Students -->     
+      </div> 
+   </section> <!-- End Main Section -->
+<%- partial('../../partials/footer.ejs') %>
+

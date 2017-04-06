@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta name="description" content="Bootstrap Admin App + jQuery">
+   <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+   <title>SiR - Sacred Heart College</title>
+
+
+   
+<!-- =============== VENDOR STYLES ===============-->
+   <!-- FONT AWESOME-->
+   <link rel="stylesheet" href="/vendor/fontawesome/css/font-awesome.min.css">
+   <!-- SIMPLE LINE ICONS-->
+   <link rel="stylesheet" href="/vendor/simple-line-icons/css/simple-line-icons.css">
+   <!-- ANIMATE.CSS-->
+   <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
+   <!-- WHIRL (spinners)-->
+   <link rel="stylesheet" href="/vendor/whirl/dist/whirl.css">
+   <!-- =============== PAGE VENDOR STYLES ===============-->
+   <!-- WEATHER ICONS-->
+   <link rel="stylesheet" href="/vendor/weather-icons/css/weather-icons.min.css">
+   <!-- DATATABLES-->
+   <link rel="stylesheet" href="/vendor/datatables-colvis/css/dataTables.colVis.css">
+   <link rel="stylesheet" href="/vendor/datatables/media/css/dataTables.bootstrap.css">
+   <link rel="stylesheet" href="/vendor/dataTables.fontAwesome/index.css">
+
+   <!-- =============== BOOTSTRAP STYLES ===============-->
+   <link rel="stylesheet" href="/css/bootstrap.css" id="bscss">
+   <!-- =============== APP STYLES ===============-->
+   <link rel="stylesheet" href="/css/app.css" id="maincss">
+
+   <!--
+        Stylesheets and Preprocessors
+        ==============================
+
+        You can always bring in CSS files manually with `<link>` tags, or asynchronously
+        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
+        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+        By default, stylesheets from your `assets/styles` folder are included
+        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
+        are supported. In production, your styles will be minified and concatenated into
+        a single file.
+
+        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Change the order of your CSS files
+            + Import stylesheets from other directories
+            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
+    -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+  </head>
+
+  <body ng-app="sir">
+    <%- body %>
+
+
+    <!--
+        Client-side Templates
+        ========================
+
+        HTML templates are important prerequisites of modern, rich client applications.
+        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
+        that you load these templates client-side.
+
+        By default, your Gruntfile is configured to automatically load and precompile
+        client-side JST templates in your `assets/templates` folder, then
+        include them here automatically (between TEMPLATES and TEMPLATES END).
+
+        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Import templates from other directories
+            + Use a different template engine (handlebars, jade, dust, etc.)
+            + Internationalize your client-side templates using a server-side
+              stringfile before they're served.
+    -->
+
+    <!--TEMPLATES-->
+    
+    <!--TEMPLATES END-->
+
+
+    <!--
+
+      Client-side Javascript
+      ========================
+
+      You can always bring in JS files manually with `script` tags, or asynchronously
+      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
+      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+      By default, files in your `assets/js` folder are included here
+      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
+      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
+      and concatenated into a single file.
+
+      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+      For example, here are a few things you could do:
+
+          + Change the order of your scripts
+          + Import scripts from other directories
+          + Use a different preprocessor, like TypeScript
+
+    -->
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/demo/demo-datatable.js"></script>
+    <script src="/js/demo/demo-flot.js"></script>
+    <script src="/js/demo/demo-forms.js"></script>
+    <script src="/js/demo/demo-jqcloud.js"></script>
+    <script src="/js/demo/demo-jqgrid.js"></script>
+    <script src="/js/demo/demo-nestable.js"></script>
+    <script src="/js/demo/demo-panels.js"></script>
+    <script src="/js/demo/demo-rtl.js"></script>
+    <script src="/js/demo/demo-search.js"></script>
+    <script src="/js/demo/demo-sortable.js"></script>
+    <script src="/js/demo/demo-upload.js"></script>
+    <script src="/js/demo/demo-vector-map.js"></script>
+    <script src="/js/demo/demo-wizard.js"></script>
+    <script src="/js/demo/demo-xeditable.js"></script>
+    <!--SCRIPTS END-->
+    <!-- =============== VENDOR SCRIPTS ===============-->
+   <!-- MODERNIZR-->
+   <script src="/vendor/modernizr/modernizr.custom.js"></script>
+   <!-- MATCHMEDIA POLYFILL-->
+   <script src="/vendor/matchMedia/matchMedia.js"></script>
+   <!-- JQUERY-->
+   <script src="/vendor/jquery/dist/jquery.js"></script>
+   <!-- BOOTSTRAP-->
+   <script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
+   <!-- STORAGE API-->
+   <script src="/vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+   <!-- JQUERY EASING-->
+   <script src="/vendor/jquery.easing/js/jquery.easing.js"></script>
+   <!-- ANIMO-->
+   <script src="/vendor/animo.js/animo.js"></script>
+   <!-- SLIMSCROLL-->
+   <script src="/vendor/slimScroll/jquery.slimscroll.min.js"></script>
+   <!-- SCREENFULL-->
+   <script src="/vendor/screenfull/dist/screenfull.js"></script>
+   <!-- LOCALIZE-->
+   <script src="/vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+   <!-- RTL demo-->
+   <script src="/js/demo/demo-rtl.js"></script>
+   <!-- =============== PAGE VENDOR SCRIPTS ===============-->
+   <!-- SPARKLINE-->
+   <script src="/vendor/sparkline/index.js"></script>
+   <!-- FLOT CHART-->
+   <script src="/vendor/Flot/jquery.flot.js"></script>
+   <script src="/vendor/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+   <script src="/vendor/Flot/jquery.flot.resize.js"></script>
+   <script src="/vendor/Flot/jquery.flot.pie.js"></script>
+   <script src="/vendor/Flot/jquery.flot.time.js"></script>
+   <script src="/vendor/Flot/jquery.flot.categories.js"></script>
+   <script src="/vendor/flot-spline/js/jquery.flot.spline.min.js"></script>
+   <!-- CLASSY LOADER-->
+   <script src="/vendor/jquery-classyloader/js/jquery.classyloader.min.js"></script>
+   <!-- MOMENT JS-->
+   <script src="/vendor/moment/min/moment-with-locales.min.js"></script>
+   <!-- DEMO-->
+   <script src="/js/demo/demo-flot.js"></script>
+   <!-- DATATABLES-->
+   <script src="/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+   <script src="/vendor/datatables-colvis/js/dataTables.colVis.js"></script>
+   <script src="/vendor/datatables/media/js/dataTables.bootstrap.js"></script>
+   <script src="/vendor/datatables-buttons/js/dataTables.buttons.js"></script>
+   <script src="/vendor/datatables-buttons/js/buttons.bootstrap.js"></script>
+   <script src="/vendor/datatables-buttons/js/buttons.colVis.js"></script>
+   <script src="/vendor/datatables-buttons/js/buttons.flash.js"></script>
+   <script src="/vendor/datatables-buttons/js/buttons.html5.js"></script>
+   <script src="/vendor/datatables-buttons/js/buttons.print.js"></script>
+   <script src="/vendor/datatables-responsive/js/dataTables.responsive.js"></script>
+   <script src="/vendor/datatables-responsive/js/responsive.bootstrap.js"></script>
+   <script src="js/demo/demo-datatable.js"></script>
+
+   <!-- =============== APP SCRIPTS ===============-->
+   <script src="/js/app.js"></script>
+  </body>
+</html>

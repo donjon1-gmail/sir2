@@ -1,0 +1,283 @@
+
+      <!-- sidebar-->
+      <aside class="aside">
+         <!-- START Sidebar (left)-->
+         <div class="aside-inner">
+            <nav data-sidebar-anyclick-close="" class="sidebar">
+               <!-- START sidebar nav-->
+               <ul class="nav">
+                  <!-- START user info-->
+                  <li class="has-user-block">
+                     <div id="user-block" class="collapse">
+                        <div class="item user-block">
+                           <!-- User picture-->
+                           <div class="user-block-picture">
+                              <div class="user-block-status">
+                                 <img src="img/user/02.jpg" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle">
+                                 <div class="circle circle-success circle-lg"></div>
+                              </div>
+                           </div>
+                           <!-- Name and Job-->
+                           <div class="user-block-info">
+                              <span class="user-block-name"><%= session.User %></span>
+                              <span class="user-block-role">%role%</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <!-- END user info-->
+                  <!-- Iterates over all sidebar items-->
+                  <li class="nav-heading ">
+<!--                     <span data-localize="sidebar.heading.HEADER">Main Navigation</span>-->
+                  </li>
+                  <li class=" ">
+                     <a href="/Ldapuser/destroy" title="Logout">
+                        <em class="icon-logout"></em>
+                        <span>Logout</span>
+                     </a>
+                  </li>
+                  <li class=" ">
+                     <a href="/dashboard" title="Dashboard">
+                        <div class="pull-right label label-info">D</div>
+                        <em class="icon-speedometer"></em>
+                        <span data-localize="sidebar.nav.DASHBOARD">Dashboard</span>
+                     </a>              
+                  </li>
+                  <li class=" ">
+                     <a href="" title="Registration">
+                        <div class="pull-right label label-success">R</div>
+                        <em class="icon-book-open"></em>
+                        <span data-localize="sidebar.nav.REGISTRATION">Registration</span>
+                     </a>
+                  </li>
+                  
+                  <li class="nav-heading ">
+                     <span data-localize="sidebar.heading.COMPONENTS">Components</span>
+                  </li>
+                  <li class=" ">
+                     <a href="#reports" title="Reports" data-toggle="collapse">
+                        <em class="icon-layers"></em>
+                        <span data-localize="sidebar.nav.element.REPORTS">Reports</span>
+                     </a>
+                     <ul id="reports" class="nav sidebar-subnav collapse">
+                        <li class="sidebar-subnav-header">Reports</li>
+                        <li class=" ">
+                           <a href="" title="Buttons">
+                              <span data-localize="sidebar.nav.element.BUTTON">Buttons</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class=" ">
+                     <a href="#worksheets" title="Worksheets" data-toggle="collapse">
+                        <em class="icon-note"></em>
+                        <span data-localize="sidebar.nav.form.WORKSHEETS">Worksheets</span>
+                     </a>
+                     <ul id="worksheets" class="nav sidebar-subnav collapse">
+                        <li class="sidebar-subnav-header">Worksheets</li>
+                        <li class=" ">
+                           <a href="" title="Standard">
+                              <span data-localize="sidebar.nav.form.STANDARD">Worksheets</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class=" ">
+                     <a href="#operations" title="Operations" data-toggle="collapse">
+                        <em class="icon-graph"></em>
+                        <span data-localize="sidebar.nav.operations.Operations">Operations</span>
+                     </a>
+                     <ul id="operations" class="nav sidebar-subnav collapse">
+                        <li class="sidebar-subnav-header">Operations</li>
+                        <li class=" ">
+                           <a href="" title="Flot">
+                              <span data-localize="sidebar.nav.chart.FLOT">Flot</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class=" ">
+                     <a href="#transcript" title="Transcript" data-toggle="collapse">
+                        <em class="icon-docs"></em>
+                        <span data-localize="sidebar.nav.transcript.TRANSCRIPT">Transcript</span>
+                     </a>
+                     <ul id="transcript" class="nav sidebar-subnav collapse">
+                        <li class="sidebar-subnav-header">Transcript</li>
+                        <li class=" ">
+                           <a href="" title="Standard">
+                              <span data-localize="sidebar.nav.table.STANDARD">Standard</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class=" ">
+                     <a href="#lists" title="Lists" data-toggle="collapse">
+                        <em class="icon-map"></em>
+                        <span data-localize="sidebar.nav.lists.LISTS">Lists</span>
+                     </a>
+                     <ul id="lists" class="nav sidebar-subnav collapse">
+                        <li class="sidebar-subnav-header">Lists</li>
+                        <li class=" ">
+                           <a href="" title="ClassList">
+                              <span data-localize="sidebar.nav.lists.List1">Class List</span>
+                           </a>
+                        </li>
+                        <li class=" ">
+                           <a href="" title="HomeRoomList">
+                              <span data-localize="sidebar.nav.lists.List1">Homeroom List</span>
+                           </a>
+                        </li>
+                        <li class=" ">
+                           <a href="L01_registeredList/registeredlist" title="RegisteredList">
+                              <span data-localize="sidebar.nav.lists.List1">Registered List</span>
+                           </a>
+                        </li>
+                     </ul>
+                  <li class="nav-heading ">
+                     <span data-localize="sidebar.heading.MORE">More</span>
+                  </li>
+                  <li class=" ">
+                     <a href="#pages" title="Pages" data-toggle="collapse">
+                        <em class="icon-doc"></em>
+                        <span data-localize="sidebar.nav.pages.Other">Other</span>
+                     </a>
+                     <ul id="pages" class="nav sidebar-subnav collapse">
+                        <li class="sidebar-subnav-header">Other</li>
+                        <li class=" ">
+                           <a href="login.html" title="Login">
+                              <span data-localize="sidebar.nav.pages.LOGIN">Login</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class=" ">
+                     <a href="#letterforms" title="Letter Forms" data-toggle="collapse">
+                        <em class="icon-notebook"></em>
+                        <span data-localize="sidebar.nav.letterforms.LETTERFORMS">Letter Forms</span>
+                     </a>
+                     <ul id="letterforms" class="nav sidebar-subnav collapse">
+                        <li class="sidebar-subnav-header">Letter Forms</li>
+                        <li class=" ">
+                           <a href="#blog" title="Blog" data-toggle="collapse">
+                              <em class="fa fa-angle-right"></em>
+                              <span>Blog</span>
+                           </a>
+                           <ul id="blog" class="nav sidebar-subnav collapse">
+                              <li class="sidebar-subnav-header">Blog</li>
+                              <li class=" ">
+                                 <a href="blog.html" title="List">
+                                    <span>List</span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>   
+                     </ul>
+                  </li>
+                  <li class=" ">
+                     <a href="#generalreports" title="General Reports" data-toggle="collapse">
+                        <em class="fa fa-folder-open-o"></em>
+                        <span>General Reports</span>
+                     </a>
+                     <ul id="generalreports" class="nav sidebar-subnav collapse">
+                        <li class="sidebar-subnav-header">General Reports</li>
+                        <li class=" ">
+                           <a href="#admin" title="Admin Reports" data-toggle="collapse">
+                              <span>Admin Reports</span>
+                           </a>
+                           <ul id="admin" class="nav sidebar-subnav collapse">
+                              <li class="sidebar-subnav-header">Religion by Sex and Form</li>
+                              <li class=" ">
+                                 <a href="/H01_historicalSummary/historicalsummary" title="historical summary">
+                                    <span>Historical Summary</span>
+                                 </a>
+                              </li>
+                           </ul>
+                           <a href="#bishops" title="Bishop's Reports" data-toggle="collapse">
+                              <span>Bishop's Reports</span>
+                           </a>
+                           <ul id="bishops" class="nav sidebar-subnav collapse">
+                              <li class="sidebar-subnav-header">Religion by Sex and Form</li>
+                              <li class=" ">
+                                 <a href="/B02_religionByForm/religionbyform" title="religion by sex and form">
+                                    <span>Religion by Sex and Form</span>
+                                 </a>
+                              </li>
+                              <li class=" ">
+                                 <a href="/B01_religionBySex/religionbysex" title="religion by sex">
+                                    <span>Religion by Sex</span>
+                                 </a>
+                              </li>
+                           </ul>
+                           <a href="#semester1" title="Semester 1" data-toggle="collapse">
+                              <span>Semester 1</span>
+                           </a>
+                           <ul id="semester1" class="nav sidebar-subnav collapse">
+                              <li class="sidebar-subnav-header">Semester 1</li>
+                              <li class=" ">
+                                 <a href="/GS01_honorsStudents/honorstudents" title="honor students">
+                                    <span>Honor Students</span>
+                                 </a>
+                              </li>
+                              <li class=" ">
+                                 <a href="/GS01_overallStudents/overallStudents" title="Overall Students">
+                                    <span>Overall Students</span>
+                                 </a>
+                              </li>
+                              <li class=" ">
+                                 <a href="/GS01_academicProbation/academicprobation" title="Academic Probation">
+                                    <span>Academic Probation</span>
+                                 </a>
+                              </li>
+                              <li class=" ">
+                                 <a href="/GS01_performanceAnalysisCourseBased/coursePerformanceAnalysis" title="Course Performance Analysis">
+                                    <span>Course Performance</span>
+                                 </a>
+                              </li>
+                              <li class=" ">
+                                 <a href="/GS01_performanceAnalysisTeacherBased/teacherPerformanceAnalysis" title="Teacher Performance Analysis">
+                                    <span>Teacher Performance</span>
+                                 </a>
+                              </li>
+                              <li class=" ">
+                                 <a href="/GS01_gradeEntryCompletion/gradeEntryCompletion" title="Grade Entry Completion">
+                                    <span>Grade Entry Completion</span>
+                                 </a>
+                              </li>
+                              <li class=" ">
+                                 <a href="#semester2" title="Semester 2" data-toggle="collapse">
+                                    <span>Semester 2</span>
+                                 </a>
+                                 <ul id="level2" class="nav sidebar-subnav collapse">
+                                    <li class="sidebar-subnav-header">Level 2</li>
+                                    <li class=" ">
+                                       <a href="#level3" title="Level 3" data-toggle="collapse">
+                                          <span>Level 3</span>
+                                       </a>
+                                       <ul id="level3" class="nav sidebar-subnav collapse">
+                                          <li class="sidebar-subnav-header">Level 3</li>
+                                          <li class=" ">
+                                             <a href="multilevel-3.html" title="Level3 Item">
+                                                <span>Level3 Item</span>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class=" ">
+                     <a href="/schedule" title="Schedule">
+                        <em class="icon-calendar"></em>
+                        <span data-localize="sidebar.nav.SCHEDULE">Schedule</span>
+                     </a>
+                  </li>
+               </ul>
+               <!-- END sidebar nav-->
+            </nav>
+         </div>
+         <!-- END Sidebar (left)-->
+      </aside>
+      

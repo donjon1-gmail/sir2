@@ -1,0 +1,39 @@
+<%- partial('./partials/topsidebar.ejs') %>
+<%- partial('./partials/sidebar.ejs') %>
+<%- partial('./partials/offsidebar.ejs') %>
+
+      <!-- Main section-->
+    <section>
+         <!-- Page content-->
+         <div class="content-wrapper">
+            <div class="content-heading">
+               <!-- START Language list-->
+               <div class="pull-right">
+                  <div class="btn-group">
+                     <button type="button" data-toggle="dropdown" class="btn btn-default">English</button>
+                     <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort">
+                        <li><a href="#" data-set-lang="en">English</a>
+                        </li>
+                        <li><a href="#" data-set-lang="es">Spanish</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- END Language list    -->
+               Weekly
+               <small data-localize="dashboard.SCHEDULE">Schedule</small>
+            </div>      
+            <div class="row">
+            <div class="col-lg-12">
+
+            <div class="panel">
+               <div class="panel-heading">Select and View</div>
+               		<div class="panel-body">
+						<object type="text/html" data="http://schedule.shc.edu.bz/" height="800px" width="100%" style="overflow:auto; width:autho;height=auto;border:5px ridge blue">
+						</object>
+               		</div>
+           		</div>
+       		</div></div></div>
+        </div>
+    </section>
+<%- partial('./partials/footer.ejs') %>

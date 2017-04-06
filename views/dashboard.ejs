@@ -1,0 +1,98 @@
+<%- partial('./partials/topsidebar.ejs') %>
+<%- partial('./partials/sidebar.ejs') %>
+<%- partial('./partials/offsidebar.ejs') %>
+
+    <!-- Main section-->
+   
+    <section>
+      <div class="content-wrapper">
+            <div class="content-heading">
+               <!-- START Language list-->
+               <div class="pull-right">
+                  <div class="btn-group">
+                     <button type="button" data-toggle="dropdown" class="btn btn-default">English</button>
+                     <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort">
+                        <li><a href="#" data-set-lang="en">English</a>
+                        </li>
+                        <li><a href="#" data-set-lang="es">Spanish</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- END Language list    -->
+               <large data-localize="dashboard.SCHEDULE" style="text-align:center;">Welcome To SiR
+               </large> 
+            </div>   
+            <!--End Top Dashboard after Time -->
+
+            <!-- Dashboard's Main Student Population-->
+            <div class="col-lg-12">
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <center><h3 class="panel-title"><%= G01_schoolPopulation[0].report%></h3> <%= G01_schoolPopulation[0].Population %></center>
+
+                       
+                     </div>                     
+                     <div class="bg-primary-dark" class="panel-body">
+                        <div class="table-responsive">
+                           <table class="table">
+                              <tbody><tr>
+                                 <% _.each(G02_populationQuery, function(data) { %>
+                                       <% if(data.form!=null) { %>
+                                          <% if(data.room===null && data.form!=null) { %>
+                                             <td class="text-center"><h3><div class=heading>Form <%= data.form %></div></h3><br>
+                                          <% } else { %>
+                                             <td class="text-center"><h3><div class="<%= data.css %>" class=heading><%= data.form+data.room %></div></h3><br>
+                                          <% } %>
+                                          <%= data.Population %>
+                                          </td>
+                                          <% if(data.room===null) { %> </tr><tr>
+                                          <% }
+                                          } 
+                                    }) %> 
+                                 </tr> 
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+
+            <div class="col-lg-12">
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <center><h3 class="panel-title">Special Interest Groups:</center>
+                     </div>                     
+                     <div class="bg-primary-dark" class="panel-body">
+                        <div class="table-responsive">
+                           <table class="table">
+                              <tbody><tr>
+
+                                 <% var local = {};
+                                    local.form=3;
+                                    _.each(G03_SIGQuery, function(data) { 
+                                    if(data.form!=local.form) { 
+                                       local.form=data.form; %> 
+                                       </tr><tr>
+                                    <% } %>
+                                    <% if(data.classCode===null && data.form!=null) { %>
+                                       <td class="text-center"><h3><div class="<%= data.css %>"class=heading>Form <%= data.form %></div></h3><br>
+                                    <% } else { %>
+                                       <td class="text-center"><h3><div  class="<%= data.css %>" class=heading><%= data.classCode %></div></h3><br>
+                                    <% } %>
+                                       <%= data.Population %>
+                                    </td>
+                                       
+                                    <% }) %> 
+                                 </tr> 
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+                     
+      </div> 
+   </section> <!-- End Main Section -->
+<%- partial('partials/footer.ejs') %>
+

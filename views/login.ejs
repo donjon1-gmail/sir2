@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta name="description" content="Bootstrap Admin App + jQuery">
+   <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+   <title>SIR</title>
+   <!-- =============== VENDOR STYLES ===============-->
+   <!-- FONT AWESOME-->
+   <link rel="stylesheet" href="../vendor/fontawesome/css/font-awesome.min.css">
+   <!-- SIMPLE LINE ICONS-->
+   <link rel="stylesheet" href="../vendor/simple-line-icons/css/simple-line-icons.css">
+   <!-- =============== BOOTSTRAP STYLES ===============-->
+   <link rel="stylesheet" href="css/bootstrap.css" id="bscss">
+   <!-- =============== APP STYLES ===============-->
+   <link rel="stylesheet" href="css/app.css" id="maincss">
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="block-center mt-xl wd-xl">
+         <!-- START panel-->
+         </br>
+         </br>
+         </br>
+         </br>
+         </br>
+         <div class="panel panel-dark panel-flat">
+            <div class="panel-heading text-center">
+               <a href="#">
+                  <img src="img/logo.png" alt="Image" class="block-center img-rounded">
+               </a>
+            </div>
+            <div class="panel-body">
+               <p class="text-center pv">SIGN IN TO SIR</p>
+               <form role="form" id="loginForm" name="loginForm" data-parsley-validate="" novalidate="" class="mb-lg">
+                  <div class="form-group has-feedback">
+                     <input input type="text" name="username" placeholder="Enter Username" autocomplete="off" required class="form-control">
+                     <span class="fa fa-envelope form-control-feedback text-muted"></span>
+                  </div>
+                  <div class="form-group has-feedback">
+                     <input input type="password" name="lpassword" placeholder="Enter Password" required class="form-control">
+                     <span class="fa fa-lock form-control-feedback text-muted"></span>
+                  </div>
+                  <center><div id ="result"> </div></center>
+                  <center><div id ="success"> </div></center>
+                  <button type="submit" value="Submit" class="btn btn-block btn-primary mt-lg">Login</button>
+               </form>
+            </div>
+         </div>
+         <!-- END panel-->
+         <div class="p-lg text-center">
+            <span>&copy;2017</span>
+            <span>Sacred Heart College Inc.</span>
+            <br>
+         </div>
+      </div>
+   </div>
+   <!-- =============== VENDOR SCRIPTS ===============-->
+   <!-- MODERNIZR-->
+   <script src="../vendor/modernizr/modernizr.custom.js"></script>
+   <!-- JQUERY-->
+   <script src="../vendor/jquery/dist/jquery.js"></script>
+   <!-- BOOTSTRAP-->
+   <script src="../vendor/bootstrap/dist/js/bootstrap.js"></script>
+   <!-- STORAGE API-->
+   <script src="../vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+   <!-- PARSLEY-->
+   <script src="../vendor/parsleyjs/dist/parsley.min.js"></script>
+   <!-- =============== APP SCRIPTS ===============-->
+   <script src="js/app.js"></script>
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/demo/demo-datatable.js"></script>
+    <script src="/js/demo/demo-flot.js"></script>
+    <script src="/js/demo/demo-forms.js"></script>
+    <script src="/js/demo/demo-jqcloud.js"></script>
+    <script src="/js/demo/demo-jqgrid.js"></script>
+    <script src="/js/demo/demo-nestable.js"></script>
+    <script src="/js/demo/demo-panels.js"></script>
+    <script src="/js/demo/demo-rtl.js"></script>
+    <script src="/js/demo/demo-search.js"></script>
+    <script src="/js/demo/demo-sortable.js"></script>
+    <script src="/js/demo/demo-upload.js"></script>
+    <script src="/js/demo/demo-vector-map.js"></script>
+    <script src="/js/demo/demo-wizard.js"></script>
+    <script src="/js/demo/demo-xeditable.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+   
+</body>
+
+</html>
+
+<script>
+
+$(document).ready(function(){
+  $( "#loginForm" ).submit(function( event ) {
+    event.preventDefault();
+    var form = $(this);
+    var data = form.serialize();
+    $.ajax({
+      type: "PUT",
+      url: '/login',
+      data: data, // serializes the form's elements.
+      success: function(result)
+
+      {
+        $('#result').html(result.message);
+
+        if(result.success === true) {
+          form[0].reset();
+         document.location.href = '/dashboard'
+        }
+      }
+    });
+  });
+});
+</script>

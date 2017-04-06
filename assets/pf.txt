@@ -1,0 +1,5 @@
+A student who fails a combination of courses with a total weight value greater than 11 or failed more than 4 courses will be deemed to have "failed" . 
+
+A third/fourth form student who fails more than two "major" subjects will also be deemed to have "failed". 
+
+In all other cases the student will be deemed to have "passed". 
